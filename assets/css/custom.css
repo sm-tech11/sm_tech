@@ -14,7 +14,7 @@
     width: 100px;
     height: 100px;
     border-radius: 100px;
-    background: #fff url('./assets/image/logo/sm_b.png') center no-repeat;
+    background: #fff url('../image/logo/sm_b.png') center no-repeat;
       center center no-repeat;
     background-size: 80%;
     box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 0.2);
