@@ -10711,11 +10711,12 @@ progress {
     height: auto
 }
 .client{
-    filter:brightness(100%) contrast(100%) saturate(0%) blur(0px) hue-rotate(0deg)
+    border-style: outset;
+    /* filter:brightness(100%) contrast(100%) saturate(0%) blur(0px) hue-rotate(0deg) */
 }
-.client:hover {
+/* .client:hover {
     filter: brightness( 100% ) contrast( 100% ) saturate( 100% ) blur( 0px ) hue-rotate( 0deg );
-}
+} */
 .img-thumbnail {
     padding: .25rem;
     background-color: var(--bs-body-bg);
