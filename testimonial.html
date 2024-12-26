@@ -428,37 +428,8 @@
                     <div class="row">
                         <div class="col-auto">
                             <div class="swiper digi-logo-slider">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="single-logo">
-                                            <img src="assets/img/brand-logo/google.svg" class="img-fluid" height="30" alt="logo" />
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="single-logo">
-                                            <img src="assets/img/brand-logo/facebook.svg" class="img-fluid" alt="logo" height="30" />
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="single-logo">
-                                            <img src="assets/img/brand-logo/youtube.svg" class="img-fluid" alt="logo" height="30" />
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="single-logo">
-                                            <img src="assets/img/brand-logo/printerest.svg" class="img-fluid" alt="logo" height="30" />
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="single-logo">
-                                            <img src="assets/img/brand-logo/webflow.svg" class="img-fluid" alt="logo" height="30" />
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="single-logo">
-                                            <img src="assets/img/brand-logo/company.svg" class="img-fluid" alt="logo" height="30" />
-                                        </div>
-                                    </div>
+                                <div class="swiper-wrapper" id="swiper-wrapper">
+                                    <!-- JavaScript will insert swiper-slide elements here -->
                                 </div>
                             </div>
                         </div>
@@ -470,6 +441,20 @@
         <div id="foot"></div>
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            let swiperWrapper = document.getElementById('swiper-wrapper');
+        
+            for (let i = 1; i <= 80; i++) {
+                let swiperSlide = document.createElement('div');
+                swiperSlide.classList.add('swiper-slide');
+                swiperSlide.innerHTML = `
+                    <div class="single-logo">
+                        <img src="assets/image/clients/${i}.png" class="img-fluid client" height="30" alt="logo" />
+                    </div>
+                `;
+                swiperWrapper.appendChild(swiperSlide);
+            }
+        </script>
         <script>
         $(function(){
             $("#head").load("header.html");
