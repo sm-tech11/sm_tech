@@ -259,12 +259,17 @@
                 // Create the HTML content for each slide
                 slide.innerHTML = `
                     <div class="sc-feedback-card bg-white rounded shadow-lg">
-                        <img src="${testimonial.logo}" alt="testimonial logo" class="mb-4" width="80">
+                        <div class="d-flex align-items-center">
+                            <img src="${testimonial.logo}" alt="testimonial logo" class="mb-4" width="80">
+                            <div class="ms-4">
+                                <h5 class="mb-4 it-company-color fs-16 fw-600" style="font-family: fangsong;">${testimonial.company_name}</h5>
+                            </div>
+                        </div>
                         <p class="clr-paragraph fs-16 fw-500 flh-24 mb-30">${testimonial.content}</p>
                         <div class="d-flex align-items-center">
                             <img src="${testimonial.person_logo}" alt="person logo" class="rounded-circle flex-shrink-0" width="80">
                             <div class="ms-4">
-                                <h5 class="mb-1 it-company-color fs-16 fw-600">${testimonial.company_name}</h5>
+                                <h5 class="mb-1 it-company-color fs-16 fw-600" style="font-family: monospace;">${testimonial.person_name}</h5>
                             </div>
                         </div>
                     </div>
@@ -290,6 +295,18 @@
             });
         }
     </script>
+    <style>
+    .sc-feedback-slider {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .swiper-slide {
+        max-width: 100%;
+    }
+    </style>
     <script>
         let swiperWrapper = document.getElementById('swiper-wrapper');
     
