@@ -203,7 +203,7 @@
         <!--our location address end-->
 
         <!-- Logo Start -->
-        <section class="digtal-marketing-logo pb-60 pt-60">
+        <!-- <section class="digtal-marketing-logo pb-60 pt-60">
             <div class="container">
                 <div class="bg-light-subtle shadow-sm py-5 px-4 rounded-3">
                     <div class="row justify-content-center">
@@ -223,7 +223,7 @@
                     
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- Logo End -->
 
         <div id="foot"></div>
@@ -255,6 +255,7 @@
                 // Create a new slide element
                 const slide = document.createElement('div');
                 slide.classList.add('swiper-slide');
+                slide.classList.add('about_slide');
         
                 // Create the HTML content for each slide
                 slide.innerHTML = `
@@ -265,7 +266,7 @@
                                 <h5 class="mb-4 it-company-color fs-16 fw-600" style="font-family: fangsong;">${testimonial.company_name}</h5>
                             </div>
                         </div>
-                        <p class="clr-paragraph fs-16 fw-500 flh-24 mb-30" style="height:110px">${testimonial.content}</p>
+                        <p class="clr-paragraph fs-16 fw-500 flh-24 mb-30" style="height:112px">${testimonial.content}</p>
                         <div class="d-flex align-items-center">
                             <img src="${testimonial.person_logo}" alt="person logo" class="rounded-circle flex-shrink-0" width="80">
                             <div class="ms-4">
@@ -295,7 +296,12 @@
             });
         }
     </script>
-    <script>
+    <style>
+        .about_slide{
+            max-width:420px !important:;
+        }
+    </style>
+    <!-- <script>
         let swiperWrapper = document.getElementById('swiper-wrapper');
     
         for (let i = 1; i <= 80; i++) {
@@ -308,7 +314,7 @@
             `;
             swiperWrapper.appendChild(swiperSlide);
         }
-    </script>
+    </script> -->
     <script>
         $(function(){
             $("#head").load("header.html");
