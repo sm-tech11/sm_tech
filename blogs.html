@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/custom.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <!--preloader start-->
@@ -42,203 +44,8 @@
 
         <!--blog section start-->
         <section class="masonary-blog-section ptb-120">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-12">
-                        <div class="single-article feature-article rounded-custom my-3">
-                            <a href="blog-single.html" class="article-img">
-                                <img src="assets/img/blog/blog-10.jpg" alt="article" class="img-fluid">
-                            </a>
-                            <div class="article-content p-4">
-                                <div class="article-category mb-4 d-block">
-                                    <a href="javascript:;" class="d-inline-block text-dark badge bg-primary-soft">Marketing</a>
-                                </div>
-                                <a href="blog-single.html">
-                                    <h2 class="h5 article-title limit-2-line-text">Why product managers must be strategic about chasing new trends</h2>
-                                </a>
-                                <p class="limit-2-line-text">Society is fragmenting into two parallel realities. In one reality, you have infinite upside and opportunity. In the other reality, you’ll continue to see the gap between your standard of living and those at the top grow more and more.</p>
-
-                                <a href="javascript:;">
-                                    <div class="d-flex align-items-center pt-4">
-                                        <div class="avatar-info">
-                                            <h6 class="mb-0 avatar-name">Donna Martin</h6>
-                                            <span class="small fw-medium text-muted">April 24, 2022</span>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <div class="single-article feature-article rounded-custom my-3">
-                            <a href="blog-single.html" class="article-img">
-                                <img src="assets/img/blog/blog-11.jpg" alt="article" class="img-fluid">
-                            </a>
-                            <div class="article-content p-4">
-                                <div class="article-category mb-4 d-block">
-                                    <a href="javascript:;" class="d-inline-block text-dark badge bg-danger-soft">Development</a>
-                                </div>
-                                <a href="blog-single.html">
-                                    <h2 class="h5 article-title limit-2-line-text">Two tried-and-true frameworks for achieving product/market fit</h2>
-                                </a>
-                                <p class="limit-2-line-text">Society is fragmenting into two parallel realities. In one reality, you have infinite upside and opportunity. In the other reality, you'll continue to see the gap between your standard of living and those at the top grow more and more.</p>
-
-                                <a href="javascript:;">
-                                    <div class="d-flex align-items-center pt-4">
-                                        <div class="avatar">
-                                            <img src="assets/img/testimonial/4.jpg" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
-                                        </div>
-                                        <div class="avatar-info">
-                                            <h6 class="mb-0 avatar-name">Donna Martin</h6>
-                                            <span class="small fw-medium text-muted">April 24, 2022</span>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <div class="single-article feature-article rounded-custom my-3">
-                            <a href="blog-single.html" class="article-img">
-                                <img src="assets/img/blog/blog-10.jpg" alt="article" class="img-fluid">
-                            </a>
-                            <div class="article-content p-4">
-                                <div class="article-category mb-4 d-block">
-                                    <a href="javascript:;" class="d-inline-block text-dark badge bg-primary-soft">Marketing</a>
-                                </div>
-                                <a href="blog-single.html">
-                                    <h2 class="h5 article-title limit-2-line-text">Why product managers must be strategic about chasing new trends</h2>
-                                </a>
-                                <p class="limit-2-line-text">Society is fragmenting into two parallel realities. In one reality, you have infinite upside and opportunity. In the other reality, you'll continue to see the gap between your standard of living and those at the top grow more and more.</p>
-
-                                <a href="javascript:;">
-                                    <div class="d-flex align-items-center pt-4">
-                                        <div class="avatar">
-                                            <img src="assets/img/testimonial/1.jpg" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
-                                        </div>
-                                        <div class="avatar-info">
-                                            <h6 class="mb-0 avatar-name">Donna Martin</h6>
-                                            <span class="small fw-medium text-muted">April 24, 2022</span>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <div class="single-article feature-article rounded-custom my-3">
-                            <a href="blog-single.html" class="article-img">
-                                <img src="assets/img/blog/blog-11.jpg" alt="article" class="img-fluid">
-                            </a>
-                            <div class="article-content p-4">
-                                <div class="article-category mb-4 d-block">
-                                    <a href="javascript:;" class="d-inline-block text-dark badge bg-danger-soft">Development</a>
-                                </div>
-                                <a href="blog-single.html">
-                                    <h2 class="h5 article-title limit-2-line-text">Two tried-and-true frameworks for achieving product/market fit</h2>
-                                </a>
-                                <p class="limit-2-line-text">Society is fragmenting into two parallel realities. In one reality, you have infinite upside and opportunity. In the other reality, you’ll continue to see the gap between your standard of living and those at the top grow more and more.</p>
-
-                                <a href="javascript:;">
-                                    <div class="d-flex align-items-center pt-4">
-                                        <div class="avatar">
-                                            <img src="assets/img/testimonial/4.jpg" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
-                                        </div>
-                                        <div class="avatar-info">
-                                            <h6 class="mb-0 avatar-name">Donna Martin</h6>
-                                            <span class="small fw-medium text-muted">April 24, 2022</span>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <div class="single-article feature-article rounded-custom my-3">
-                            <a href="blog-single.html" class="article-img">
-                                <img src="assets/img/blog/blog-10.jpg" alt="article" class="img-fluid">
-                            </a>
-                            <div class="article-content p-4">
-                                <div class="article-category mb-4 d-block">
-                                    <a href="javascript:;" class="d-inline-block text-dark badge bg-primary-soft">Marketing</a>
-                                </div>
-                                <a href="blog-single.html">
-                                    <h2 class="h5 article-title limit-2-line-text">Why product managers must be strategic about chasing new trends</h2>
-                                </a>
-                                <p class="limit-2-line-text">Society is fragmenting into two parallel realities. In one reality, you have infinite upside and opportunity. In the other reality, you’ll continue to see the gap between your standard of living and those at the top grow more and more.</p>
-
-                                <a href="javascript:;">
-                                    <div class="d-flex align-items-center pt-4">
-                                        <div class="avatar">
-                                            <img src="assets/img/testimonial/1.jpg" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
-                                        </div>
-                                        <div class="avatar-info">
-                                            <h6 class="mb-0 avatar-name">Donna Martin</h6>
-                                            <span class="small fw-medium text-muted">April 24, 2022</span>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <div class="single-article feature-article rounded-custom my-3">
-                            <a href="blog-single.html" class="article-img">
-                                <img src="assets/img/blog/blog-11.jpg" alt="article" class="img-fluid">
-                            </a>
-                            <div class="article-content p-4">
-                                <div class="article-category mb-4 d-block">
-                                    <a href="javascript:;" class="d-inline-block text-dark badge bg-danger-soft">Development</a>
-                                </div>
-                                <a href="blog-single.html">
-                                    <h2 class="h5 article-title limit-2-line-text">Two tried-and-true frameworks for achieving product/market fit</h2>
-                                </a>
-                                <p class="limit-2-line-text">Society is fragmenting into two parallel realities. In one reality, you have infinite upside and opportunity. In the other reality, you’ll continue to see the gap between your standard of living and those at the top grow more and more.</p>
-
-                                <a href="javascript:;">
-                                    <div class="d-flex align-items-center pt-4">
-                                        <div class="avatar">
-                                            <img src="assets/img/testimonial/4.jpg" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
-                                        </div>
-                                        <div class="avatar-info">
-                                            <h6 class="mb-0 avatar-name">Donna Martin</h6>
-                                            <span class="small fw-medium text-muted">April 24, 2022</span>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!--pagination start-->
-                <!-- <div class="row justify-content-center align-items-center mt-5">
-                    <div class="col-auto my-1">
-                        <a href="#" class="btn btn-soft-primary btn-sm">Previous</a>
-                    </div>
-                    <div class="col-auto my-1">
-                        <nav>
-                            <ul class="pagination rounded mb-0">
-                                <li class="page-item"><a class="page-link" href="#">1</a>
-                                </li>
-                                <li class="page-item active"><a class="page-link" href="#">2</a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">3</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col-auto my-1">
-                        <a href="#" class="btn btn-soft-primary btn-sm">Next</a>
-                    </div>
-                </div> -->
-                <!--pagination end-->
+            <div class="container" id="blog-container"> 
+                <!-- Articles will be inserted dynamically here -->
             </div>
         </section>
         <!--blog section end-->
@@ -254,6 +61,84 @@
             $("#foot").load("footer.html");
         });
     </script>
+    <script>
+        const imageFolderPath = 'https://drive.google.com/drive/folders/1cMsqa_ns-Av0Yv5-49_w9s2ZCBAh-qSa';
+        const excelFilePath = 'https://docs.google.com/spreadsheets/d/1KbxQFQkSiqVIm0O0koln97ZzzMbBb8-sk8YjcC2hPDg/edit?gid=0#gid=0';
+        
+        let articles = [];
+        function loadArticlesData() {
+            fetchExcelFile(excelFilePath);
+        }
+        
+        function fetchExcelFile(filePath) {
+            fetch(filePath)
+                .then(response => response.arrayBuffer())
+                .then(data => {
+                    const workbook = XLSX.read(data, { type: 'array' });
+                    
+                    // Assuming the data is in the first sheet (adjust if necessary)
+                    const sheet = workbook.Sheets[workbook.SheetNames[0]];
+                    const rows = XLSX.utils.sheet_to_json(sheet);
+        
+                    // Process rows and add to articles array
+                    articles = rows.map((row, index) => ({
+                        imageUrl: `${imageFolderPath}/${index + 1}.jpg`, // Image URL based on the folder path and index (1, 2, 3, ...)
+                        title: row.Title, // Assuming 'Title' is a column
+                        category: row.Category, // Assuming 'Category' is a column
+                        content: row.Content, // Assuming 'Content' is a column
+                        author: row.Author, // Assuming 'Author' is a column
+                        date: row.Date // Assuming 'Date' is a column
+                    }));
+        
+                    // Once data is loaded, generate blog articles dynamically
+                    generateBlogArticles();
+                })
+                .catch(error => console.error('Error fetching Excel file:', error));
+        }
+        
+        // Function to generate the HTML content dynamically
+        function generateBlogArticles() {
+            const container = document.getElementById('blog-container');
+            container.innerHTML = ''; // Clear existing articles
+        
+            // Loop through the articles array to generate HTML
+            articles.forEach(article => {
+                const articleHtml = `
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="single-article feature-article rounded-custom my-3">
+                                <a href="blog-single.html" class="article-img">
+                                    <img src="${article.imageUrl}" alt="article" class="img-fluid">
+                                </a>
+                                <div class="article-content p-4">
+                                    <div class="article-category mb-4 d-block">
+                                        <a href="javascript:;" class="d-inline-block text-dark badge bg-primary-soft">${article.category}</a>
+                                    </div>
+                                    <a href="blog-single.html">
+                                        <h2 class="h5 article-title limit-2-line-text">${article.title}</h2>
+                                    </a>
+                                    <p class="limit-2-line-text">${article.content}</p>
+                                    <a href="javascript:;">
+                                        <div class="d-flex align-items-center pt-4">
+                                            <div class="avatar-info">
+                                                <h6 class="mb-0 avatar-name">${article.author}</h6>
+                                                <span class="small fw-medium text-muted">${article.date}</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += articleHtml; // Append the article HTML dynamically
+            });
+        }
+        
+        // Initialize the page by loading data
+        loadArticlesData();
+        
+        </script>
     <!--build:js-->
     <script src="assets/js/vendors/jquery-3.6.0.min.js"></script>
     <script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
