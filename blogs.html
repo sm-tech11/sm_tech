@@ -65,8 +65,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
 
     <script>
-        const imageFolderPath = 'https://github.com/sm-tech11/sm_tech/tree/main/assets/Blogs%20file/Images';
-        const excelFilePath = 'https://github.com/sm-tech11/sm_tech/blob/main/assets/Blogs%20file/Blogs.xlsx';
+        const imageFolderPath = 'assets/Blogs%20file/Images/'; // Path to the local images folder
+        const excelFilePath = 'assets/Blogs%20file/Blogs.xlsx'; // Path to the local Excel file
         
         let articles = [];
         
@@ -79,32 +79,32 @@
                 .then(response => response.arrayBuffer())
                 .then(data => {
                     const workbook = XLSX.read(data, { type: 'array' });
-
+    
                     // Assuming the data is in the first sheet
                     const sheet = workbook.Sheets[workbook.SheetNames[0]];
                     const rows = XLSX.utils.sheet_to_json(sheet);
-
+    
                     // Process rows and add to articles array
                     articles = rows.map((row, index) => ({
-                        imageUrl: `${imageFolderPath}${index + 1}.jpg`, // Image URL from the GitHub image folder
+                        imageUrl: `${imageFolderPath}${index + 1}.png`, // Image URL from the local folder
                         title: row.Title, // Assuming 'Title' is a column
                         category: row.Category, // Assuming 'Category' is a column
                         content: row.Content, // Assuming 'Content' is a column
                         author: row.Author, // Assuming 'Author' is a column
                         date: row.Date // Assuming 'Date' is a column
                     }));
-
+    
                     // Once data is loaded, generate blog articles dynamically
                     generateBlogArticles();
                 })
                 .catch(error => console.error('Error fetching Excel file:', error));
         }
-
+    
         // Function to generate the HTML content dynamically
         function generateBlogArticles() {
             const container = document.getElementById('blog-container');
             container.innerHTML = ''; // Clear existing articles
-
+    
             // Loop through the articles array to generate HTML
             articles.forEach(article => {
                 const articleHtml = `
@@ -112,7 +112,7 @@
                         <div class="col-lg-6 col-md-12">
                             <div class="single-article feature-article rounded-custom my-3">
                                 <a href="blog-single.html" class="article-img">
-                                    <img src="${article.imageUrl}" alt="article" class="img-fluid">
+                                    <img src="${article.imageUrl}" alt="article" class="img-fluid" onerror="this.src='default-image.jpg'">
                                 </a>
                                 <div class="article-content p-4">
                                     <div class="article-category mb-4 d-block">
@@ -138,10 +138,11 @@
                 container.innerHTML += articleHtml; // Append the article HTML dynamically
             });
         }
-
+    
         // Initialize the page by loading data
         loadArticlesData();
     </script>
+    
 
     <!-- Your additional scripts -->
     <script src="assets/js/vendors/jquery-3.6.0.min.js"></script>
