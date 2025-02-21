@@ -44,8 +44,10 @@
 
         <!--blog section start-->
         <section class="masonary-blog-section ptb-120">
-            <div class="container" id="blog-container"> 
+            <div class="container">
+                <div class="row" id="blog-container">
                 <!-- Articles will be inserted dynamically here -->
+                </div>
             </div>
         </section>
         <!--blog section end-->
@@ -108,7 +110,6 @@
             // Loop through the articles array to generate HTML
             articles.forEach(article => {
                 const articleHtml = `
-                    <div class="row">
                         <div class="col-lg-6 col-md-12">
                             <div class="single-article feature-article rounded-custom my-3">
                                 <a href="blog-single.html" class="article-img">
@@ -133,7 +134,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
                 `;
                 container.innerHTML += articleHtml; // Append the article HTML dynamically
             });
