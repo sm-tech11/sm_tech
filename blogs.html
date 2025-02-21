@@ -61,47 +61,48 @@
             $("#foot").load("footer.html");
         });
     </script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script> -->
     <script>
-        const imageFolderPath = 'https://drive.google.com/drive/folders/1cMsqa_ns-Av0Yv5-49_w9s2ZCBAh-qSa';
-        const excelFilePath = 'https://docs.google.com/spreadsheets/d/1KbxQFQkSiqVIm0O0koln97ZzzMbBb8-sk8YjcC2hPDg/edit?gid=0#gid=0';
-        
+        const imageFolderPath = 'https://github.com/sm-tech11/sm_tech/tree/main/assets/Blogs%20file/Images';  // Replace with your image folder path
+        const excelFilePath = 'https://github.com/sm-tech11/sm_tech/blob/main/assets/Blogs%20file/Blogs.xlsx';  // GitHub raw file URL
+    
         let articles = [];
+    
+        // Load articles data from GitHub-hosted Excel file
         function loadArticlesData() {
-            fetchExcelFile(excelFilePath);
+            fetchExcelFile(excelFilePath);  // Fetch the Excel file from GitHub
         }
-        
+    
+        // Function to fetch the Excel file and process data
         function fetchExcelFile(filePath) {
             fetch(filePath)
-                .then(response => response.arrayBuffer())
+                .then(response => response.arrayBuffer())  // Get the file as an ArrayBuffer
                 .then(data => {
-                    const workbook = XLSX.read(data, { type: 'array' });
-                    
-                    // Assuming the data is in the first sheet (adjust if necessary)
-                    const sheet = workbook.Sheets[workbook.SheetNames[0]];
-                    const rows = XLSX.utils.sheet_to_json(sheet);
-        
-                    // Process rows and add to articles array
+                    const workbook = XLSX.read(data, { type: 'array' });  // Read the Excel file
+                    const sheet = workbook.Sheets[workbook.SheetNames[0]];  // Get the first sheet
+                    const rows = XLSX.utils.sheet_to_json(sheet);  // Convert the sheet data to JSON format
+    
+                    // Map the rows to articles array
                     articles = rows.map((row, index) => ({
-                        imageUrl: `${imageFolderPath}/${index + 1}.jpg`, // Image URL based on the folder path and index (1, 2, 3, ...)
-                        title: row.Title, // Assuming 'Title' is a column
-                        category: row.Category, // Assuming 'Category' is a column
-                        content: row.Content, // Assuming 'Content' is a column
-                        author: row.Author, // Assuming 'Author' is a column
-                        date: row.Date // Assuming 'Date' is a column
+                        imageUrl: `${imageFolderPath}${index + 1}.jpg`,  // Image URL based on the folder path and index
+                        title: row.Title,  // Assuming 'Title' is a column in your sheet
+                        category: row.Category,  // Assuming 'Category' is a column in your sheet
+                        content: row.Content,  // Assuming 'Content' is a column in your sheet
+                        author: row.Author,  // Assuming 'Author' is a column in your sheet
+                        date: row.Date,  // Assuming 'Date' is a column in your sheet
                     }));
-        
-                    // Once data is loaded, generate blog articles dynamically
-                    generateBlogArticles();
+    
+                    generateBlogArticles();  // Generate blog articles after data is fetched
                 })
-                .catch(error => console.error('Error fetching Excel file:', error));
+                .catch(error => console.error('Error fetching Excel file:', error));  // Handle errors
         }
-        
-        // Function to generate the HTML content dynamically
+    
+        // Function to dynamically generate HTML for blog articles
         function generateBlogArticles() {
             const container = document.getElementById('blog-container');
-            container.innerHTML = ''; // Clear existing articles
-        
-            // Loop through the articles array to generate HTML
+            container.innerHTML = '';  // Clear existing articles
+    
+            // Loop through the articles array to generate HTML for each article
             articles.forEach(article => {
                 const articleHtml = `
                     <div class="row">
@@ -131,15 +132,14 @@
                         </div>
                     </div>
                 `;
-                container.innerHTML += articleHtml; // Append the article HTML dynamically
+                container.innerHTML += articleHtml;  // Append the generated HTML to the container
             });
         }
-        
-        // Initialize the page by loading data
+    
+        // Initialize the page by loading data from GitHub
         loadArticlesData();
-        
-        </script>
-    <!--build:js-->
+    </script>
+    
     <script src="assets/js/vendors/jquery-3.6.0.min.js"></script>
     <script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
     <script src="assets/js/vendors/swiper-bundle.min.js"></script>
@@ -152,3 +152,5 @@
     <!--endbuild-->
 </body>
 </html>
+
+
