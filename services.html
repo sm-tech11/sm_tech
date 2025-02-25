@@ -12,155 +12,286 @@
 
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/snipped.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
-.disflex{
-  display:flex;
-}
-.disflex2{
-  display:flex;
-  flex-direction:column;
-}
-.catainer{
-  display:flex;
-  flex-direction:column;
-  margin:0 auto;
-  text-align:center;
-}
-.product-card {
-    align-items: center;
-    width: 90%;
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: left;
-}
 
-.image-container {
-    position: relative;
-}
-
-.image-2{
-    width: 75%;
-    border-radius: 15px;
-}
-.collect{
-    width: 155%;
-    border-radius: 15px;
-}
-.favorite-star {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    color: #000;
-}
-
-.product-info h2 {
-    margin: 15px 0 10px;
-    font-size: 24px;
-}
-
-.product-info p {
-    font-size: 14px;
-    color: #555;
-}
-
-.tags {
-    margin: 10px 0;
-}
-
-.tag {
-  cursor:pointer;
-    display: inline-block;
-    background-color:orange ;
-    border-radius: 10px;
-    padding: 5px 10px;
-    font-size: 12px;
-    margin-right: 5px;
-}
-.tag:hover {
-  background-color:greenyellow;
-}
-.price-order {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 15px;
-}
-
-.price {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.order-button {
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.order-button:hover {
-    background-color: #444;
-  color:greenyellow;
-}
-.favorite-star{
-cursor:pointer;
-}
-.favorite-star.active {
-    color: gold;
-}
     </style>
-</head>
-<body>
-    <!--preloader start-->
-    <div id="preloader" class="bg-light-subtle">
-        <div class="preloader-wrap">
-            <img src="assets/img/favicon.png" alt="logo" class="img-fluid preloader-icon">
-            <div class="loading-bar"></div>
+        
+    <body>
+        <!--preloader start-->
+        <div id="preloader" class="bg-light-subtle">
+            <div class="preloader-wrap">
+                <img src="assets/img/favicon.png" alt="logo" class="img-fluid preloader-icon">
+                <div class="loading-bar"></div>
+            </div>
         </div>
-    </div>
-    <!--preloader end-->
-    <!--main content wrapper start-->
-    <div class="main-wrapper">
-
+        <!--preloader end-->
+        <!--main content wrapper start-->
+        <div class="main-wrapper">
+    
         <!--header section start-->
         <div id="head"></div>
             
-        <div class="catainer">
-            <div class="product-card">
-              <div class="image-container">
-                <div class="row disflex">
-                  <div class="col-6" style="margin-right: -169px;"> <img class="image-2" src="https://retailwire.com/wp-content/uploads/zcdayrowlc0.jpg" alt="Morning Set"></div>
-                  <div class="col-3 disflex2"> 
-                    <div class="col-6 mb-2"> <img class="collect" src="https://retailwire.com/wp-content/uploads/zcdayrowlc0.jpg" alt="Morning Set"></div>
-                    <div class="col-6"> <img class="collect" src="https://retailwire.com/wp-content/uploads/zcdayrowlc0.jpg" alt="Morning Set"></div>
-                  </div>
-                  <div class="col-4">
-                        <div class="product-info">
-                            <h2>Morning Set</h2>
-                            <p>Set of coffee and chocolate cookies as a top tier among our customers and a perfect way to start your day.</p>
-                            <div class="tags">
-                                <span class="tag">sugar</span>
-                                <span class="tag">vanilla aroma</span>
-                                <span class="tag">cherry jam</span>
-                            </div>
-                            <div class="price-order">
-                                <span class="price">$8</span>
-                                <button class="order-button">Order Now</button>
+        <!--page header section start-->
+        <section class="page-header position-relative overflow-hidden ptb-120 bg-dark" style="background: url('assets/image/page-header-bg.svg')no-repeat bottom left">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <h1 class="display-5 fw-bold">Spotlight</h1>
+                    </div>
+                </div>
+                <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light right-5"></div>
+            </div>
+        </section>
+        <!--page header section end-->
+
+        <section class="integration-section pt-120">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-lg-3">
+                        <div class="integration-list-wrap">
+                            <a class="integration-1">
+                                <img src="assets/image/integations/1.png" alt="integration" class="img-fluid rounded-circle">
+                            </a>
+                            <a class="integration-2">
+                                <img src="assets/image/integations/2.png" alt="integration" class="img-fluid rounded-circle">
+                            </a>
+                            <a class="integration-3">
+                                <img src="assets/image/integations/3.png" alt="integration" class="img-fluid rounded-circle">
+                            </a>
+
+                            <a class="integration-4">
+                                <img src="assets/image/integations/4.png" alt="integration" class="img-fluid rounded-circle">
+                            </a>
+                            <a class="integration-5">
+                                <img src="assets/image/integations/5.png" alt="integration" class="img-fluid rounded-circle">
+                            </a>
+                            <a class="integration-6">
+                                <img src="assets/image/integations/6.png" alt="integration" class="img-fluid rounded-circle">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-12">
+                        <div class="section-heading text-center my-5 my-lg-0 my-xl-0">
+                            <h5 class="h6 text-primary">Integration</h5>
+                            <h2>We Collaborate with Top Company in World</h2>
+                            <!-- <a href="integrations.html" class="mt-4 btn btn-primary">View all Integration</a> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="col-lg-4">
+                            <div class="integration-list-wrap">
+                                <a class="integration-7">
+                                    <img src="assets/image/integations/7.png" alt="integration" class="img-fluid rounded-circle">
+                                </a>
+                                <a class="integration-8">
+                                    <img src="assets/image/integations/8.png" alt="integration" class="img-fluid rounded-circle">
+                                </a>
+                                <a class="integration-9">
+                                    <img src="assets/image/integations/9.png" alt="integration" class="img-fluid rounded-circle">
+                                </a>
+
+                                <a class="integration-10">
+                                    <img src="assets/image/integations/10.png" alt="integration" class="img-fluid rounded-circle">
+                                </a>
+                                <a class="integration-11">
+                                    <img src="assets/image/integations/11.png" alt="integration" class="img-fluid rounded-circle">
+                                </a>
+                                <a class="integration-12">
+                                    <img src="assets/image/integations/12.png" alt="integration" class="img-fluid rounded-circle">
+                                </a>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+
+            <!--collaboration section start-->
+            <div class="container ptb-60">
+                <div class="swiper">
+                  <div class="slide-container swiper-wrapper">
+                    <div class="slide swiper-slide">
+                      <div class="card slide-1">
+                        <div class="style-9" role="group" aria-label="1 / 5" data-swiper-slide-index="0">
+                            <div class="style-10">
+                                <div class="style-11">
+                                    <div class="style-12">
+                                        <div class="style-13">
+                                            <a href="portfolio/ev-charging-station-finder-app.php" class="style-14">
+                                                <img src="/assets/sample/mac-ev-large.webp" alt="EV Charging Finder" class="style-15" width="640" height="620" loading="lazy" /> </a>
+                                        </div>
+                                        <div class="style-16">
+                                            <a href="portfolio/ev-charging-station-finder-app.php" class="style-17">
+                                                <img src="/assets/sample/mac-ev-small.webp" alt="EV Charging Finder App" class="style-18" width="440" height="620" loading="lazy" /> </a>
+                                        </div>
+                                        <div class="style-19">
+                                            <div class="style-20">
+                                                <div class="style-21">EV Charging Finder Station App</div>
+                                                <div class="style-22">Services</div>
+                                                <div class="style-23">
+                                                    <ul class="style-24">
+                                                        <li class="style-25">Hire Dedicated Team</li>
+                                                        <li class="style-26">UI UX Design</li>
+                                                        <li class="style-27">Mobile App Development</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="style-28">Industry</div>
+                                                <div class="style-29">
+                                                    <ul class="style-30">
+                                                        <li class="style-31">Automotive</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="style-32">
+                                                    <div class="style-33">Want to Start a Project?</div>
+                                                    <div class="style-34">
+                                                        <a href="#main-footer" class="style-35">
+                                                            <span class="style-36">Let’s discuss</span> <i class="style-37"></i> </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="slide swiper-slide">
+                        <div class="card slide-1">
+                            <div class="style-9" role="group" aria-label="1 / 5" data-swiper-slide-index="0">
+                                <div class="style-10">
+                                    <div class="style-11">
+                                        <div class="style-12">
+                                            <div class="style-13">
+                                                <a href="portfolio/ev-charging-station-finder-app.php" class="style-14">
+                                                    <img src="/assets/sample/ab-workout-large.webp" alt="EV Charging Finder" class="style-15" width="640" height="620" loading="lazy" /> </a>
+                                            </div>
+                                            <div class="style-16">
+                                                <a href="portfolio/ev-charging-station-finder-app.php" class="style-17">
+                                                    <img src="/assets/sample/ab-workout-small.webp" alt="EV Charging Finder App" class="style-18" width="440" height="620" loading="lazy" /> </a>
+                                            </div>
+                                            <div class="style-19">
+                                                <div class="style-20">
+                                                    <div class="style-21">EV Charging Finder Station App</div>
+                                                    <div class="style-22">Services</div>
+                                                    <div class="style-23">
+                                                        <ul class="style-24">
+                                                            <li class="style-25">Hire Dedicated Team</li>
+                                                            <li class="style-26">UI UX Design</li>
+                                                            <li class="style-27">Mobile App Development</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="style-28">Industry</div>
+                                                    <div class="style-29">
+                                                        <ul class="style-30">
+                                                            <li class="style-31">Automotive</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="style-32">
+                                                        <div class="style-33">Want to Start a Project?</div>
+                                                        <div class="style-34">
+                                                            <a href="#main-footer" class="style-35">
+                                                                <span class="style-36">Let’s discuss</span> <i class="style-37"></i> </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="slide swiper-slide" >
+                        <div class="card slide-1">
+                            <div class="style-9" role="group" aria-label="1 / 5" data-swiper-slide-index="0">
+                                <div class="style-10">
+                                    <div class="style-11">
+                                        <div class="style-12">
+                                            <div class="style-13">
+                                                <a href="portfolio/ev-charging-station-finder-app.php" class="style-14">
+                                                    <img src="/assets/sample/zooop-logistics-large.webp" alt="EV Charging Finder" class="style-15" width="640" height="620" loading="lazy" /> </a>
+                                            </div>
+                                            <div class="style-16">
+                                                <a href="portfolio/ev-charging-station-finder-app.php" class="style-17">
+                                                    <img src="/assets/sample/zooop-logistics-small.webp" alt="EV Charging Finder App" class="style-18" width="440" height="620" loading="lazy" /> </a>
+                                            </div>
+                                            <div class="style-19">
+                                                <div class="style-20">
+                                                    <div class="style-21">EV Charging Finder Station App</div>
+                                                    <div class="style-22">Services</div>
+                                                    <div class="style-23">
+                                                        <ul class="style-24">
+                                                            <li class="style-25">Hire Dedicated Team</li>
+                                                            <li class="style-26">UI UX Design</li>
+                                                            <li class="style-27">Mobile App Development</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="style-28">Industry</div>
+                                                    <div class="style-29">
+                                                        <ul class="style-30">
+                                                            <li class="style-31">Automotive</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="style-32">
+                                                        <div class="style-33">Want to Start a Project?</div>
+                                                        <div class="style-34">
+                                                            <a href="#main-footer" class="style-35">
+                                                                <span class="style-36">Let’s discuss</span> <i class="style-37"></i> </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="slider-button-next slider-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 350 160 90">
+                      <g class="slider-svg-wrap">
+                        <g class="slider-svg-circle-wrap">
+                          <circle cx="42" cy="42" r="40"></circle>
+                        </g>
+                        <path class="slider-svg-arrow" d="M.983,6.929,4.447,3.464.983,0,0,.983,2.482,3.464,0,5.946Z">
+                        </path>
+                        <path class="slider-svg-line" d="M80,0H0"></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="slider-button-prev slider-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 350 160 90">
+                      <g class="slider-svg-wrap">
+                        <g class="slider-svg-circle-wrap">
+                          <circle cx="42" cy="42" r="40"></circle>
+                        </g>
+                        <path class="slider-svg-arrow" d="M.983,6.929,4.447,3.464.983,0,0,.983,2.482,3.464,0,5.946Z">
+                        </path>
+                        <path class="slider-svg-line" d="M80,0H0"></path>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
               </div>
-          </div>
-          
-          </div>
+              
+              <div class="autoplay-progress">
+                <svg viewBox="0 0 48 48">
+                  <circle cx="24" cy="24" r="20"></circle>
+                </svg>
+                <span></span>
+              </div>
+            <!--collaboration section end-->
+        </section>
+        
         <!-- Logo Start -->
-        <section class="digtal-marketing-logo pb-60 pt-60">
+        <section class="digtal-marketing-logo pb-40 pt-40">
             <div class="container">
                 <div class="bg-light-subtle shadow-sm py-5 px-4 rounded-3">
                     <div class="row justify-content-center">
@@ -171,7 +302,7 @@ cursor:pointer;
                     <div class="row">
                         <div class="col-auto">
                             <div class="swiper digi-logo-slider">
-                                <div class="swiper-wrapper" id="swiper-wrapper">
+                                <div class="swiper-wrapper" id="swiper-wrapper2">
                                     <!-- JavaScript will insert swiper-slide elements here -->
                                 </div>
                             </div>
@@ -184,9 +315,82 @@ cursor:pointer;
         <!-- Logo End -->
         <div id="foot"></div>
     </div>
+    <script>
+        const progressCircle = document.querySelectorAll(".autoplay-progress");
+        const progressBar = document.querySelectorAll(".autoplay-progress-bar");
+
+        const swiper = new Swiper(".swiper", {
+        lazy: true,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        grabCursor: true,
+        effect: "coverflow",
+        speed: 1500,
+        coverflowEffect: {
+            rotate: 100,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false
+        },
+        mousewheel: true,
+        keyboard: {
+            enabled: true
+        },
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: false,
+            clickable: true
+        },
+        navigation: {
+            nextEl: ".slider-button-next",
+            prevEl: ".slider-button-prev"
+        },
+        on: {
+            autoplayTimeLeft(s, time, progress) {
+            progressCircle.forEach((progressCircle) => {
+                progressCircle
+                .querySelector("svg")
+                .style.setProperty("--progress", 1 - progress);
+                progressCircle.querySelector("span").textContent = `${Math.ceil(
+                time / 1000
+                )}s`;
+            });
+            progressBar.forEach((progressBar) => {
+                progressBar.style.setProperty("--progress", `${(1 - progress) * 100}%`);
+            });
+            },
+            init() {
+            changeBackground(this);
+            },
+            slideChange() {
+            changeBackground(this);
+            }
+        }
+        });
+
+        // function changeBackground(slide) {
+        // 	const getBackground =
+        // 		slide.slides[slide.activeIndex].getAttribute("data-bg-color");
+
+        // 	const getProgressColor = slide.slides[slide.activeIndex].getAttribute(
+        // 		"data-progress-color"
+        // 	);
+
+        // 	document.body.style.backgroundColor = `${getBackground}`;
+
+        // 	document.body.style.setProperty("--progress-color", `${getProgressColor}`);
+        // }
+
+    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        let swiperWrapper = document.getElementById('swiper-wrapper');
+        let swiperWrapper = document.getElementById('swiper-wrapper2');
     
         for (let i = 1; i <= 80; i++) {
             let swiperSlide = document.createElement('div');
