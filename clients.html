@@ -131,17 +131,47 @@
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
-            let imageListContainer = document.getElementById('image-list');
-            for (let i = 1; i <= 84; i++) {
-                let liElement = document.createElement('li');
-                liElement.innerHTML = `
-                    <div class="single-logo" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Brand Name">
-                        <img src="assets/image/clients/${i}.png" class="img-fluid client" height="30" alt="logo" />
-                    </div>
-                `;
-                imageListContainer.appendChild(liElement);
+            // Fetch the JSON file
+            fetch('clients.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch JSON data');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Call function to generate the swiper slides based on the JSON data
+                    generateSlides(data);
+                })
+                .catch(error => {
+                    console.error('Error loading the JSON:', error);
+                });
+            
+            // Function to generate swiper slides
+            function generateSlides(clients) {
+                let imageListContainer = document.getElementById('image-list');
+            
+                clients.forEach(client => {
+                    let liElement = document.createElement('li');
+                    liElement.innerHTML = `
+                        <div data-bs-toggle="tooltip" data-bs-placement="top" title="${client.name}">
+                            <img src="assets/image/clients/${client.image}" class="img-fluid client" height="30" alt="logo" />
+                        </div>
+                    `;
+                    imageListContainer.appendChild(liElement);
+                });
+                var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+                    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+                        new bootstrap.Tooltip(tooltipTriggerEl);
+                });
             }
         </script>
+        <style>
+            /* Tooltip Container */
+            .tooltip .tooltip-arrow {
+                display: none !important;
+            }
+        </style>
         <script>
         $(function(){
             $("#head").load("header.html");
@@ -150,7 +180,7 @@
         </script>
     <!--build:js-->
     <script src="assets/js/vendors/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/vendors/swiper-bundle.min.js"></script>
     <script src="assets/js/vendors/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/vendors/parallax.min.js"></script>
